@@ -9,7 +9,7 @@ reFile(){
 			then 
 			fileName=$(basename "$file" | sed 's/\.[^.]*$//')
 			extension=$(basename "$file" | awk -f. '{printf $NF}')
-			mv -- "$file" "${fileName}_${suffix}.${extension}"
+			mv -- "$file" "${folder}/${fileName}_${suffix}.${extension}"
 		fi
 	done
 	}
